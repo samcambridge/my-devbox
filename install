@@ -16,8 +16,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 git clone git://github.com/ajh17/Spacegray.vim ~/.vim/pack/vendor/start/Spacegray
 
 #zsh
+sudo apt install zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
 
 # Recursively symlink all files in home folder
 cp -RTs $PWD/home $HOME
