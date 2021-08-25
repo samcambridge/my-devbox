@@ -1,0 +1,23 @@
+#! /usr/bin/env bash
+
+# Ensure apt-get has packages list before trying to install anything
+sudo apt-get update
+
+sudo apt-get install -y ctags
+
+#Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+#FZF
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --all
+
+#Colorscheme
+git clone git://github.com/ajh17/Spacegray.vim ~/.vim/pack/vendor/start/Spacegray
+
+#zsh
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+chsh -s $(which zsh)
+
+# Recursively symlink all files in home folder
+cp -RTs $PWD/home $HOME
